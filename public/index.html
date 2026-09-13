@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Blind View Tech — Accessible, secure websites for small businesses and nonprofits</title>
+  <meta name="description" content="Dwayne Davis builds accessible, secure websites for small businesses and nonprofits in Sacramento and beyond. Screen-reader tested, WCAG 2.2 AA, fast and affordable.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F0B1A" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://ablindviewtech.com/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A Blind View Tech — Accessible, secure websites">
+  <meta property="og:description" content="Accessible, secure websites for small businesses and nonprofits. Built and tested with real screen readers.">
+  <meta property="og:url" content="https://ablindviewtech.com/">
+  <meta property="og:image" content="https://ablindviewtech.com/assets/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/theme-init.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="90 85 845 655" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 420 Q 512 120 904 420 Q 512 720 120 420 Z"/>
+          <circle cx="480" cy="420" r="140"/>
+          <circle cx="480" cy="420" r="56"/>
+          <circle cx="480" cy="420" r="14" fill="currentColor"/>
+          <path d="M 595 350 L 680 290 L 780 290"/>
+          <circle cx="805" cy="290" r="26"/>
+          <path d="M 620 420 L 740 420 L 800 375 L 875 375"/>
+          <circle cx="900" cy="375" r="26"/>
+          <path d="M 595 490 L 700 545 L 810 545"/>
+          <circle cx="835" cy="545" r="26"/>
+        </g>
+      </svg>
+      <span class="brand-name">A Blind View Tech<span class="visually-hidden">, home</span></span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <ul role="list">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#process">How I work</a></li>
+        <li><a href="#stack">Tools</a></li>
+        <li><a href="#trust">Why me</a></li>
+        <li><a href="#contact" class="nav-cta">Hire me</a></li>
+      </ul>
+    </nav>
+
+    <fieldset class="theme-switch" id="theme-switch" hidden>
+      <legend>Appearance</legend>
+      <label><input type="radio" name="theme" value="system" checked> <span>Auto</span></label>
+      <label><input type="radio" name="theme" value="light"> <span>Light</span></label>
+      <label><input type="radio" name="theme" value="dark"> <span>Dark</span></label>
+    </fieldset>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- 1. Value proposition -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap">
+      <p class="eyebrow">Sacramento, California · Working with clients everywhere</p>
+      <h1 id="hero-heading">I build accessible, secure websites for small businesses and nonprofits.</h1>
+      <p class="lead">Hi, I’m Dwayne Davis. I work closely with you to bring your vision online, then make sure the result is secure and usable by everyone, including the one in four adults who live with a disability. Every site I ship is tested with real screen readers and meets WCAG 2.2 AA.</p>
+      <div class="actions">
+        <a class="button button-primary" href="#contact">Start a project</a>
+        <a class="button button-secondary" href="#work">See my work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Curated portfolio -->
+  <section id="work" class="section" aria-labelledby="work-heading">
+    <div class="wrap">
+      <h2 id="work-heading">Selected work</h2>
+      <p class="section-intro">A few recent projects. Each one is built to be fast, readable, and fully navigable by keyboard and screen reader.</p>
+
+      <ul class="cards" role="list">
+        <li class="card">
+          <h3 id="p-nfb">NFB of California, River City Chapter</h3>
+          <p>A single-page site for the Sacramento chapter of the National Federation of the Blind: meeting details that update themselves, how to join, and how to get in touch. Screen-reader first, with a light/dark theme that follows the visitor’s device.</p>
+          <ul class="tags" aria-label="Built with">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Cloudflare Pages</li>
+          </ul>
+          <p class="card-links">
+            <a href="https://nfb-river-city-chapter.pages.dev/">Visit the live site<span class="visually-hidden">: NFB River City Chapter</span></a>
+            <a href="https://github.com/ablindview/nfb-river-city-chapter">Source on GitHub<span class="visually-hidden">: NFB River City Chapter</span></a>
+          </p>
+        </li>
+
+        <li class="card">
+          <h3 id="p-ccf">Cookies &amp; Cuddle Farm</h3>
+          <p>Web and fundraising work for a small animal sanctuary nonprofit. I evaluated donation platforms and banking options by testing them with screen readers, not by reading the vendors’ marketing, so that supporters with disabilities can give as easily as anyone else.</p>
+          <ul class="tags" aria-label="Built with">
+            <li>Nonprofit</li><li>Donation platform</li><li>Accessibility audit</li>
+          </ul>
+          <p class="card-links"><span class="status">Site in progress</span></p>
+        </li>
+
+        <li class="card">
+          <h3 id="p-cpacc">CPACC study tools</h3>
+          <p>A free study guide, practice quiz, and 100 flashcards for the IAAP Certified Professional in Accessibility Core Competencies exam. Interactive, keyboard-operable, and built to work well with screen readers.</p>
+          <ul class="tags" aria-label="Built with">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+          <p class="card-links">
+            <a href="https://iaap.abvtech.net/CPACC_Study_Guide.html">Open the CPACC study guide</a>
+            <a href="https://iaap.abvtech.net/CPACC_Practice_Quiz.html">Try the CPACC practice quiz</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section id="process" class="section" aria-labelledby="process-heading">
+    <div class="wrap">
+      <h2 id="process-heading">How I work</h2>
+      <p class="section-intro">Plain language, no surprises. You don’t need to know any jargon; I’ll explain each decision and why it matters for your visitors.</p>
+      <ol class="steps" role="list">
+        <li>
+          <h3>Listen</h3>
+          <p>We talk through what your business or organization does, who your visitors are, and what you need the site to accomplish. I’ll give you a clear scope and a fixed price.</p>
+        </li>
+        <li>
+          <h3>Build</h3>
+          <p>I write clean, fast pages with accessibility built in from the first line, not bolted on at the end. You’ll see progress at every step and can review on your own phone or computer.</p>
+        </li>
+        <li>
+          <h3>Test</h3>
+          <p>I test every page with VoiceOver, JAWS, and NVDA, with keyboard only, at 200% zoom, and in both light and dark mode, then run automated checks and a security review before launch.</p>
+        </li>
+        <li>
+          <h3>Launch and support</h3>
+          <p>Your site goes live on fast, secure hosting with HTTPS, security headers, and automatic deploys from GitHub. I hand over the keys and stay available for updates.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. Tech stack -->
+  <section id="stack" class="section" aria-labelledby="stack-heading">
+    <div class="wrap">
+      <h2 id="stack-heading">Tools I use</h2>
+      <p class="section-intro">I pick the simplest tool that fits the job, so your site stays easy and inexpensive to maintain.</p>
+      <div class="stack-grid">
+        <div>
+          <h3>Building</h3>
+          <ul>
+            <li>HTML, CSS, and JavaScript</li>
+            <li>React and Vite</li>
+            <li>Squarespace and WordPress</li>
+            <li>Git and GitHub</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hosting and security</h3>
+          <ul>
+            <li>Cloudflare Pages and Workers</li>
+            <li>Cloudflare DNS and HTTPS</li>
+            <li>Content Security Policy and security headers</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Accessibility testing</h3>
+          <ul>
+            <li>VoiceOver on macOS and iOS</li>
+            <li>JAWS and NVDA on Windows</li>
+            <li>axe and Lighthouse</li>
+            <li>WCAG 2.2 AA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Social proof -->
+  <section id="trust" class="section" aria-labelledby="trust-heading">
+    <div class="wrap">
+      <h2 id="trust-heading">Why clients trust me</h2>
+      <ul class="proof" role="list">
+        <li>
+          <h3>I use a screen reader every day</h3>
+          <p>Accessibility isn’t a checklist for me; it’s how I use the web. When I say a site works with VoiceOver or JAWS, it’s because I used it myself.</p>
+        </li>
+        <li>
+          <h3>Six-plus years at Apple</h3>
+          <p>Escalating roles in customer support, product insights, and training taught me how to explain technology clearly and to fix problems the first time.</p>
+        </li>
+        <li>
+          <h3>Accessibility trainer and tester</h3>
+          <p>I’ve trained blind and low-vision users on screen readers at the Society for the Blind, and I’ve tested products for accessibility as part of Fable’s community of testers.</p>
+        </li>
+        <li>
+          <h3>Rooted in the community</h3>
+          <p>Member of the National Federation of the Blind of California, River City Chapter, and committed to the idea that small organizations deserve great, inclusive websites too.</p>
+        </li>
+      </ul>
+
+      <!--
+        Client testimonials go here once they arrive. Template:
+
+        <h3>What clients say</h3>
+        <ul class="testimonials" role="list">
+          <li>
+            <blockquote>
+              <p>Quote text.</p>
+            </blockquote>
+            <p class="cite">Name, Role, Organization</p>
+          </li>
+        </ul>
+      -->
+    </div>
+  </section>
+
+  <!-- 5. Call to action -->
+  <section id="contact" class="section contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <h2 id="contact-heading">Let’s build your site</h2>
+      <p class="section-intro">Tell me a little about your project and I’ll reply within two business days. Prefer email? Write to <a href="mailto:dwayne@abvtech.net">dwayne@abvtech.net</a>.</p>
+
+      <form id="contact-form" action="/api/contact" method="post">
+        <div id="form-status" class="status-box" role="status" tabindex="-1"></div>
+
+        <p class="field">
+          <label for="name">Your name <span class="req">(required)</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="name-error">
+          <span id="name-error" class="error"></span>
+        </p>
+
+        <p class="field">
+          <label for="email">Email address <span class="req">(required)</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="email-hint email-error">
+          <span id="email-hint" class="hint">I’ll only use this to reply to you.</span>
+          <span id="email-error" class="error"></span>
+        </p>
+
+        <p class="field">
+          <label for="org">Business or organization <span class="opt">(optional)</span></label>
+          <input id="org" name="org" type="text" autocomplete="organization" maxlength="150">
+        </p>
+
+        <p class="field">
+          <label for="message">What do you need? <span class="req">(required)</span></label>
+          <textarea id="message" name="message" rows="6" required maxlength="4000" aria-describedby="message-hint message-error"></textarea>
+          <span id="message-hint" class="hint">A sentence or two is plenty. Include a link to your current site if you have one.</span>
+          <span id="message-error" class="error"></span>
+        </p>
+
+        <!-- Honeypot: hidden from people and assistive tech; bots tend to fill it. -->
+        <div class="hp" aria-hidden="true">
+          <label for="contact-extra">Leave this field empty</label>
+          <input id="contact-extra" name="contact_extra" type="text" tabindex="-1" autocomplete="one-time-code">
+        </div>
+        <input type="hidden" name="started" id="started" value="">
+
+        <p class="actions">
+          <button class="button button-primary" type="submit">Send message</button>
+        </p>
+
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Social">
+      <ul class="social" role="list">
+        <li><a href="https://www.linkedin.com/in/ablindviewtech" rel="me">LinkedIn</a></li>
+        <li><a href="https://github.com/ablindview" rel="me">GitHub</a></li>
+        <li><a href="https://youtube.com/channel/UC1SLvfxHsgmqIFXd8FKU3Cw" rel="me">YouTube</a></li>
+        <li><a href="https://www.facebook.com/ablindviewtech" rel="me">Facebook</a></li>
+        <li><a href="https://www.instagram.com/ablindviewtech/" rel="me">Instagram</a></li>
+      </ul>
+    </nav>
+    <p><a href="/accessibility.html">Accessibility statement</a></p>
+    <p>© <span id="year">2026</span> A Blind View Tech · Dwayne Davis · Sacramento, CA</p>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>

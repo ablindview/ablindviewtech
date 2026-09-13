@@ -1,0 +1,398 @@
+/* A Blind View Tech — site styles
+   Theme: follows the device (prefers-color-scheme) by default; a manual
+   override sets data-theme="light" or "dark" on <html>. All colors are
+   tokens so both themes stay in sync. Contrast is at least 4.5:1 for text
+   and 3:1 for UI parts in both modes. */
+
+:root {
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --bg-raised: #F6F3FC;
+  --ink: #1B1530;
+  --ink-soft: #4A4360;
+  --brand: #5B2BC7;        /* links, logo, accents — 7.3:1 on white */
+  --brand-ink: #FFFFFF;    /* text on a --brand background */
+  --line: #D6CFE8;
+  --focus: #B34700;        /* 4.8:1 on white, distinct from brand */
+  --error: #B3261E;
+  --success-bg: #E6F4EA;
+  --success-ink: #0B5A1F;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0F0B1A;
+    --bg-raised: #1B1530;
+    --ink: #F1EDFA;
+    --ink-soft: #C5BDDA;
+    --brand: #C9AEFF;      /* 11:1 on #0F0B1A */
+    --brand-ink: #1B1530;
+    --line: #3B3352;
+    --focus: #FFB454;
+    --error: #FF9B94;
+    --success-bg: #163A22;
+    --success-ink: #C8F0D2;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0F0B1A;
+  --bg-raised: #1B1530;
+  --ink: #F1EDFA;
+  --ink-soft: #C5BDDA;
+  --brand: #C9AEFF;
+  --brand-ink: #1B1530;
+  --line: #3B3352;
+  --focus: #FFB454;
+  --error: #FF9B94;
+  --success-bg: #163A22;
+  --success-ink: #C8F0D2;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: auto; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  padding-inline: 20px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: 64rem; margin-inline: auto; }
+
+a { color: var(--brand); text-underline-offset: 0.18em; text-decoration-thickness: 0.09em; }
+a:hover { text-decoration-thickness: 0.2em; }
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+#main:focus-visible { outline-offset: -3px; }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 20px;
+  top: -100px;
+  z-index: 100;
+  background: var(--brand);
+  color: var(--brand-ink);
+  padding: 0.7rem 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+
+/* Header */
+.site-header {
+  border-bottom: 2px solid var(--line);
+  padding-block: 1rem;
+}
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  min-height: 44px;
+}
+.brand:hover .brand-name { text-decoration: underline; }
+.brand-mark { width: 56px; height: auto; flex: 0 0 auto; }
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+.site-nav a {
+  display: inline-block;
+  padding: 0.5rem 0.1rem;
+  font-weight: 700;
+  min-height: 44px;
+  line-height: 1.6;
+}
+.site-nav .nav-cta {
+  background: var(--brand);
+  color: var(--brand-ink);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.site-nav .nav-cta:hover { text-decoration: underline; }
+
+/* Theme switch: a real radio group so it's announced as one control */
+.theme-switch {
+  margin: 0;
+  margin-inline-start: auto;
+  padding: 0.25rem 0.5rem 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+  font-size: 1rem;
+}
+.theme-switch legend {
+  padding-inline: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.theme-switch label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 32px;
+  cursor: pointer;
+}
+.theme-switch input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--brand); }
+
+/* Hero */
+.hero { padding-block: 3.5rem 2.5rem; }
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  line-height: 1.12;
+  text-wrap: balance;
+  max-width: 22ch;
+}
+.lead { font-size: 1.3rem; max-width: 60ch; }
+p { margin: 0 0 1rem; max-width: 70ch; }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 1.5rem;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid var(--brand);
+}
+.button-primary { background: var(--brand); color: var(--brand-ink); }
+.button-secondary { background: transparent; color: var(--brand); }
+.button:hover { text-decoration: underline; }
+.button[aria-disabled="true"], .button:disabled { opacity: 0.7; cursor: progress; }
+
+/* Sections */
+.section {
+  padding-block: 2.75rem;
+  border-top: 1px solid var(--line);
+}
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+h3 { margin: 0 0 0.5rem; font-size: 1.25rem; line-height: 1.3; }
+.section-intro { font-size: 1.2rem; color: var(--ink-soft); margin-bottom: 1.75rem; }
+
+/* Portfolio cards */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.4rem 1.4rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.card > :last-child { margin-bottom: 0; }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin: auto 0 0; padding: 0; }
+.tags li {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  background: var(--bg);
+}
+.card-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 1rem; }
+.card-links a { font-weight: 700; display: inline-block; padding-block: 0.3rem; }
+.status { font-style: italic; color: var(--ink-soft); }
+
+/* Process steps */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+.steps li {
+  counter-increment: step;
+  padding: 1.25rem 1.25rem 0.5rem;
+  border-left: 4px solid var(--brand);
+  background: var(--bg-raised);
+  border-radius: 0 12px 12px 0;
+}
+.steps h3::before {
+  content: counter(step) ". ";
+  color: var(--brand);
+}
+
+/* Stack */
+.stack-grid {
+  display: grid;
+  gap: 1.5rem 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+.stack-grid ul { margin: 0; padding-left: 1.2rem; }
+.stack-grid li { margin-bottom: 0.3rem; }
+
+/* Proof */
+.proof {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+.proof p:last-child { margin-bottom: 0; }
+
+.testimonials { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.testimonials blockquote { margin: 0; padding: 1rem 1.25rem; border-left: 4px solid var(--brand); background: var(--bg-raised); }
+.cite { font-weight: 700; margin-top: 0.5rem; }
+
+/* Contact form */
+.contact form { max-width: 40rem; }
+.field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1.25rem; max-width: none; }
+label { font-weight: 700; }
+.req, .opt { font-weight: 400; color: var(--ink-soft); font-size: 0.95rem; }
+.hint { color: var(--ink-soft); font-size: 1rem; }
+.error { color: var(--error); font-weight: 700; font-size: 1rem; }
+.error:empty { display: none; }
+input[type="text"], input[type="email"], textarea {
+  font: inherit;
+  color: var(--ink);
+  background: var(--bg);
+  border: 2px solid var(--ink-soft);
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  min-height: 48px;
+  width: 100%;
+}
+textarea { resize: vertical; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--error); border-width: 3px; }
+
+/* Honeypot: off-screen, never display:none so the form layout stays stable for bots */
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.status-box { margin-bottom: 1.25rem; max-width: 40rem; }
+.status-box h3 { margin-bottom: 0.4rem; }
+.status-box ul { margin: 0; padding-left: 1.2rem; }
+.status-box a { font-weight: 700; }
+.status-box:not(:empty) {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 2px solid var(--line);
+  background: var(--bg-raised);
+}
+.status-box.ok { background: var(--success-bg); color: var(--success-ink); border-color: transparent; }
+.status-box.err { border-color: var(--error); }
+.status-box p { margin: 0; }
+.status-box p + p { margin-top: 0.5rem; }
+
+/* Footer */
+.site-footer {
+  margin-top: 2rem;
+  padding-block: 1.75rem 2.5rem;
+  border-top: 2px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+.social {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+.social a { display: inline-block; padding-block: 0.4rem; font-weight: 700; }
+.site-footer p { margin-bottom: 0.4rem; }
+
+/* Secondary pages */
+.page { padding-block: 2.5rem; }
+.page h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+
+/* Print */
+@media print {
+  .skip-link, .theme-switch, .site-nav, form { display: none; }
+  body { color: #000; background: #fff; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+}

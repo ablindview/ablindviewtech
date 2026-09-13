@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 85 845 655" role="img" aria-label="A Blind View Tech logo">
+
+  <g fill="none" stroke="#8A3FFC" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Eye outline (almond shape) -->
+    <path d="M 120 420 Q 512 120 904 420 Q 512 720 120 420 Z"/>
+
+    <!-- Iris (outer circle) -->
+    <circle cx="480" cy="420" r="140"/>
+
+    <!-- Pupil (inner circle) -->
+    <circle cx="480" cy="420" r="56"/>
+
+    <!-- Pupil center dot -->
+    <circle cx="480" cy="420" r="14" fill="#8A3FFC"/>
+
+    <!-- Circuit trace 1: from iris upper-right going up and out to node -->
+    <path d="M 595 350 L 680 290 L 780 290"/>
+    <circle cx="805" cy="290" r="26"/>
+
+    <!-- Circuit trace 2: from iris right going right then up to node -->
+    <path d="M 620 420 L 740 420 L 800 375 L 875 375"/>
+    <circle cx="900" cy="375" r="26"/>
+
+    <!-- Circuit trace 3: from iris lower-right going down and out to node -->
+    <path d="M 595 490 L 700 545 L 810 545"/>
+    <circle cx="835" cy="545" r="26"/>
+
+  </g>
+
+</svg>

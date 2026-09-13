@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local testing with `npx wrangler pages dev public`
+RESEND_API_KEY=re_xxxxxxxxx
+CONTACT_TO=dwayne@abvtech.net
+CONTACT_FROM=A Blind View Tech <hello@ablindviewtech.com>

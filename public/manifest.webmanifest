@@ -1,0 +1,12 @@
+{
+  "name": "A Blind View Tech",
+  "short_name": "ABV Tech",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0F0B1A",
+  "theme_color": "#5B2BC7",
+  "icons": [
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

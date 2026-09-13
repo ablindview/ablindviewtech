@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Message not sent — A Blind View Tech</title>
+  <meta name="description" content="The contact form could not send your message.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F0B1A" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/theme-init.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="90 85 845 655" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 420 Q 512 120 904 420 Q 512 720 120 420 Z"/>
+          <circle cx="480" cy="420" r="140"/>
+          <circle cx="480" cy="420" r="56"/>
+          <circle cx="480" cy="420" r="14" fill="currentColor"/>
+          <path d="M 595 350 L 680 290 L 780 290"/>
+          <circle cx="805" cy="290" r="26"/>
+          <path d="M 620 420 L 740 420 L 800 375 L 875 375"/>
+          <circle cx="900" cy="375" r="26"/>
+          <path d="M 595 490 L 700 545 L 810 545"/>
+          <circle cx="835" cy="545" r="26"/>
+        </g>
+      </svg>
+      <span class="brand-name">A Blind View Tech<span class="visually-hidden">, home</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul role="list">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#process">How I work</a></li>
+        <li><a href="/#contact" class="nav-cta">Hire me</a></li>
+      </ul>
+    </nav>
+    <fieldset class="theme-switch" id="theme-switch" hidden>
+      <legend>Appearance</legend>
+      <label><input type="radio" name="theme" value="system" checked> <span>Auto</span></label>
+      <label><input type="radio" name="theme" value="light"> <span>Light</span></label>
+      <label><input type="radio" name="theme" value="dark"> <span>Dark</span></label>
+    </fieldset>
+  </div>
+</header>
+
+<main id="main" tabindex="-1" class="page">
+  <div class="wrap">
+
+    <h1>Sorry, that didn’t go through</h1>
+    <p class="lead" id="sorry-reason" data-input="The contact form couldn’t send your message. Please make sure your name, email address, and message are filled in and try again." data-busy="You’ve sent several messages in the last hour, so the form took a break. Please try again later." data-down="The contact form isn’t available right now; it’s a problem on my end, not yours.">The contact form couldn’t send your message.</p>
+    <p class="lead">You can always email me directly at <a href="mailto:dwayne@abvtech.net">dwayne@abvtech.net</a>.</p>
+    <p><a class="button button-primary" href="/#contact">Back to the contact form</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><a href="/">Back to the home page</a> · <a href="/accessibility.html">Accessibility statement</a></p>
+    <p>© <span id="year">2026</span> A Blind View Tech · Dwayne Davis · Sacramento, CA</p>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>

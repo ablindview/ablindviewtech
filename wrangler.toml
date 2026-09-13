@@ -1,0 +1,15 @@
+name = "ablindviewtech"
+compatibility_date = "2026-09-01"
+pages_build_output_dir = "public"
+
+# Plain (non-secret) variables live here because wrangler.toml is present.
+# RESEND_API_KEY is a secret: set it in the dashboard (Settings → Variables and Secrets)
+# or with `npx wrangler pages secret put RESEND_API_KEY --project-name ablindviewtech`.
+[vars]
+CONTACT_TO = "dwayne@abvtech.net"
+CONTACT_FROM = "A Blind View Tech <hello@ablindviewtech.com>"
+
+# Optional per-IP rate limiting. Create a KV namespace, then uncomment and add its id.
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT"
+# id = "<namespace id>"
