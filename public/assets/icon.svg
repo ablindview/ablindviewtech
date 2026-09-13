@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 85 845 655" role="img" aria-label="A Blind View Tech logo">
 
-  <g fill="none" stroke="#8A3FFC" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#FD5A1E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
 
     <!-- Eye outline (almond shape) -->
     <path d="M 120 420 Q 512 120 904 420 Q 512 720 120 420 Z"/>
@@ -12,7 +12,7 @@
     <circle cx="480" cy="420" r="56"/>
 
     <!-- Pupil center dot -->
-    <circle cx="480" cy="420" r="14" fill="#8A3FFC"/>
+    <circle cx="480" cy="420" r="14" fill="#FD5A1E"/>
 
     <!-- Circuit trace 1: from iris upper-right going up and out to node -->
     <path d="M 595 350 L 680 290 L 780 290"/>

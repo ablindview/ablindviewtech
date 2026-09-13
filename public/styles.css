@@ -1,20 +1,22 @@
 /* A Blind View Tech — site styles
    Theme: follows the device (prefers-color-scheme) by default; a manual
    override sets data-theme="light" or "dark" on <html>. All colors are
-   tokens so both themes stay in sync. Contrast is at least 4.5:1 for text
-   and 3:1 for UI parts in both modes. */
+   tokens so both themes stay in sync. The accent is San Francisco Giants
+   orange (#FD5A1E), deepened to #BF4008 in light mode so link text clears
+   4.5:1 on white. Contrast is at least 4.5:1 for text and 3:1 for UI parts
+   in both modes. */
 
 :root {
   color-scheme: light;
   --bg: #FFFFFF;
-  --bg-raised: #F6F3FC;
-  --ink: #1B1530;
-  --ink-soft: #4A4360;
-  --brand: #5B2BC7;        /* links, logo, accents — 7.3:1 on white */
+  --bg-raised: #FBF3EE;
+  --ink: #27251F;
+  --ink-soft: #55504A;
+  --brand: #BF4008;        /* deepened Giants orange — 5.3:1 on white */
   --brand-ink: #FFFFFF;    /* text on a --brand background */
-  --line: #D6CFE8;
-  --focus: #B34700;        /* 4.8:1 on white, distinct from brand */
-  --error: #B3261E;
+  --line: #E0D3C9;
+  --focus: #5B2BC7;        /* purple, so focus never reads as the accent */
+  --error: #A81E12;
   --success-bg: #E6F4EA;
   --success-ink: #0B5A1F;
 }
@@ -22,33 +24,33 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0F0B1A;
-    --bg-raised: #1B1530;
-    --ink: #F1EDFA;
-    --ink-soft: #C5BDDA;
-    --brand: #C9AEFF;      /* 11:1 on #0F0B1A */
-    --brand-ink: #1B1530;
-    --line: #3B3352;
-    --focus: #FFB454;
+    --bg: #14110F;
+    --bg-raised: #221D19;
+    --ink: #F7F2ED;
+    --ink-soft: #D2C7BE;
+    --brand: #FD5A1E;      /* Giants orange — 6:1 on #14110F */
+    --brand-ink: #14110F;
+    --line: #453B33;
+    --focus: #C9AEFF;
     --error: #FF9B94;
-    --success-bg: #163A22;
-    --success-ink: #C8F0D2;
+    --success-bg: #16351F;
+    --success-ink: #C6EFD0;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0F0B1A;
-  --bg-raised: #1B1530;
-  --ink: #F1EDFA;
-  --ink-soft: #C5BDDA;
-  --brand: #C9AEFF;
-  --brand-ink: #1B1530;
-  --line: #3B3352;
-  --focus: #FFB454;
+--bg: #14110F;
+  --bg-raised: #221D19;
+  --ink: #F7F2ED;
+  --ink-soft: #D2C7BE;
+  --brand: #FD5A1E;      /* Giants orange — 6:1 on #14110F */
+  --brand-ink: #14110F;
+  --line: #453B33;
+  --focus: #C9AEFF;
   --error: #FF9B94;
-  --success-bg: #163A22;
-  --success-ink: #C8F0D2;
+  --success-bg: #16351F;
+  --success-ink: #C6EFD0;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
