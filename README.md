@@ -26,6 +26,7 @@ public/                static site (deployed as-is)
   sorry.html           shown if a no-JavaScript submission fails
   styles.css, script.js, theme-init.js
   _headers             security headers and CSP for Cloudflare Pages
+  _redirects           sends www and the pages.dev hostname to ablindviewtech.com
   assets/              logo and icons
 functions/api/contact.js   Pages Function: POST /api/contact
 wrangler.toml          Pages project config
