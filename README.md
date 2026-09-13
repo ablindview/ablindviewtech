@@ -26,7 +26,6 @@ public/                static site (deployed as-is)
   sorry.html           shown if a no-JavaScript submission fails
   styles.css, script.js, theme-init.js
   _headers             security headers and CSP for Cloudflare Pages
-  _redirects           sends www and the pages.dev hostname to ablindviewtech.com
   assets/              logo and icons
 functions/api/contact.js   Pages Function: POST /api/contact
 wrangler.toml          Pages project config
@@ -63,6 +62,10 @@ Every push to `main` deploys automatically once the GitHub repository is connect
 ```
 npx wrangler pages deploy public --project-name ablindviewtech
 ```
+
+## Domains
+
+`ablindviewtech.com` and `www.ablindviewtech.com` are attached to the Pages project as custom domains, and `ablindviewtech.pages.dev` also serves the site. The pages declare `ablindviewtech.com` as their canonical URL. A `_redirects` file cannot send one hostname to another (its source must be a path), so if you want `www` to redirect to the apex, add a Redirect Rule on the zone instead: Cloudflare dashboard → ablindviewtech.com → Rules → Redirect Rules.
 
 ## Adding testimonials
 
