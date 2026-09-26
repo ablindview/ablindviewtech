@@ -39,6 +39,12 @@ npx wrangler pages dev public
 
 That serves the site with the `_headers` file and the contact function. To exercise the form locally, copy `.dev.vars.example` to `.dev.vars` and fill in real values.
 
+## Contact form (currently paused)
+
+The form is switched off while Dwayne is not accepting new clients. The "Availability" section of `public/index.html` carries the notice in its place, and `functions/api/contact.js` answers every submission with 503 because `ACCEPTING_CLIENTS` is `false`.
+
+To reopen it: set `ACCEPTING_CLIENTS = true` in `functions/api/contact.js`, put the form markup back in the Availability section of `public/index.html` (see the git history for the original block), and change the hero and nav buttons back to "Start a project" and "Hire me". The Resend configuration below stays valid in the meantime.
+
 ## Contact form setup (one time)
 
 The form emails you through [Resend](https://resend.com).

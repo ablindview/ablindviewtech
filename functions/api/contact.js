@@ -21,6 +21,10 @@
  * dashboard.
  */
 
+// The contact form is paused while Dwayne is not taking new clients. Set this
+// back to true (and restore the form markup in public/index.html) to reopen it.
+const ACCEPTING_CLIENTS = false;
+
 const MAX = { name: 100, email: 254, org: 150, message: 4000 };
 const MIN_FILL_MS = 3000;          // forms submitted faster than this are bots
 const RATE_WINDOW_S = 60 * 60;     // 1 hour
@@ -134,6 +138,13 @@ function respond(wantsJson, request, status, body) {
 export async function onRequestPost({ request, env }) {
   let wantsJson = true;
   try {
+    if (!ACCEPTING_CLIENTS) {
+      return json(503, {
+        ok: false,
+        error: 'The contact form is closed while I am not accepting new clients. Please check back shortly.',
+      });
+    }
+
     if (!sameOrigin(request)) return json(403, { ok: false, error: 'Request blocked.' });
 
     let body;

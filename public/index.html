@@ -53,7 +53,7 @@
         <li><a href="#process">How I work</a></li>
         <li><a href="#stack">Tools</a></li>
         <li><a href="#trust">Why me</a></li>
-        <li><a href="#contact" class="nav-cta">Hire me</a></li>
+        <li><a href="#contact" class="nav-cta">Availability</a></li>
       </ul>
     </nav>
 
@@ -75,8 +75,8 @@
       <h1 id="hero-heading">I build accessible, secure websites for small businesses and nonprofits.</h1>
       <p class="lead">Hi, I’m Dwayne Davis. I work closely with you to bring your vision online, then make sure the result is secure and usable by everyone, including the one in four adults who live with a disability. Every site I ship is tested with real screen readers and meets WCAG 2.2 AA.</p>
       <div class="actions">
-        <a class="button button-primary" href="#contact">Start a project</a>
-        <a class="button button-secondary" href="#work">See my work</a>
+        <a class="button button-primary" href="#work">See my work</a>
+        <a class="button button-secondary" href="#contact">Check availability</a>
       </div>
     </div>
   </section>
@@ -225,52 +225,16 @@
     </div>
   </section>
 
-  <!-- 5. Call to action -->
+  <!-- 5. Availability notice (contact form paused) -->
   <section id="contact" class="section contact" aria-labelledby="contact-heading">
     <div class="wrap">
-      <h2 id="contact-heading">Let’s build your site</h2>
-      <p class="section-intro">Tell me a little about your project and I’ll reply within two business days. Prefer email? Write to <a href="mailto:dwayne@abvtech.net">dwayne@abvtech.net</a>.</p>
+      <h2 id="contact-heading">Availability</h2>
 
-      <form id="contact-form" action="/api/contact" method="post">
-        <div id="form-status" class="status-box" role="status" tabindex="-1"></div>
-
-        <p class="field">
-          <label for="name">Your name <span class="req">(required)</span></label>
-          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="name-error">
-          <span id="name-error" class="error"></span>
-        </p>
-
-        <p class="field">
-          <label for="email">Email address <span class="req">(required)</span></label>
-          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="email-hint email-error">
-          <span id="email-hint" class="hint">I’ll only use this to reply to you.</span>
-          <span id="email-error" class="error"></span>
-        </p>
-
-        <p class="field">
-          <label for="org">Business or organization <span class="opt">(optional)</span></label>
-          <input id="org" name="org" type="text" autocomplete="organization" maxlength="150">
-        </p>
-
-        <p class="field">
-          <label for="message">What do you need? <span class="req">(required)</span></label>
-          <textarea id="message" name="message" rows="6" required maxlength="4000" aria-describedby="message-hint message-error"></textarea>
-          <span id="message-hint" class="hint">A sentence or two is plenty. Include a link to your current site if you have one.</span>
-          <span id="message-error" class="error"></span>
-        </p>
-
-        <!-- Honeypot: hidden from people and assistive tech; bots tend to fill it. -->
-        <div class="hp" aria-hidden="true">
-          <label for="contact-extra">Leave this field empty</label>
-          <input id="contact-extra" name="contact_extra" type="text" tabindex="-1" autocomplete="one-time-code">
-        </div>
-        <input type="hidden" name="started" id="started" value="">
-
-        <p class="actions">
-          <button class="button button-primary" type="submit">Send message</button>
-        </p>
-
-      </form>
+      <div class="notice">
+        <p class="notice-lead">I am not accepting new clients at this time.</p>
+        <p>My project list is full, so the contact form is closed for now. I expect to open it again shortly, and when I do, this is where the form will reappear.</p>
+        <p>Thanks for your interest. In the meantime you are welcome to look through my work above.</p>
+      </div>
     </div>
   </section>
 
